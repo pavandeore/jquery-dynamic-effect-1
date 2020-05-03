@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic effect page</title>
+	<script src="jquery.js"></script>
+	<style>
+		h1{
+			text-align: center;
+		}
+		button{
+			padding: 5px;
+			font-size: 16px;
+			margin-left: 5px;
+			margin-bottom: 7px;
+		}
+
+		.articleonedesign{
+			background: #252525;
+			color: white;
+			font-family: arial;
+			font-size: 18px;
+		}
+		.articletwodesign{
+			background: #252525;
+			color: white;
+			font-family: arial;
+			font-size: 18px;
+		}
+		.responsive{
+			display: grid;
+			grid-template-columns: 50% 50%;
+			margin: 20px;
+		}
+		.buttonstyle{
+			border-radius: 15px;
+			background: white;
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+
+
+<h1>This is some heading.com</h1><br/>
+
+<button id="btn1">Click here style first article</button>
+<button id="btn2">Click here style second article</button>
+<button id="btn3">Give Background to heading</button>
+<button id="btn4">Make articles responsive</button>
+<button id="btn5">Change Buttons</button>
+
+<br/>
+<section id="sectiondesign">
+	<article id="articleone">
+		<h2>Mini Heading one</h2>
+		<p>This is some article This is some article This is some article This is some article This is some article This is some article This is some article This is some article This is some article This is some article </p>
+	</article>
+	<article id="articletwo">
+		<h2>Mini Heading two</h2>
+		<p>This is some article This is some article This is some article This is some article This is some article This is some article This is some article This is some article This is some article This is some article</p>
+	</article>
+</section>
+
+
+
+
+<script>
+	
+	$(document).ready(function(){
+		
+		$('#btn1').click(function(){
+			$('#articleone').addClass('articleonedesign');
+		})
+		$('#btn2').click(function(){
+			$('#articletwo').addClass('articletwodesign');
+		})
+		$('#btn3').click(function(){
+			$('h1').css('background','pink');
+		})
+		$('#btn4').click(function(){
+			$('section').addClass('responsive');
+		})
+		$('#btn5').click(function(){
+			$('button').addClass('buttonstyle');
+		})
+
+	});
+
+
+</script>
+</body>
+</html>
